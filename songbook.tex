@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[noshading,chorded]{songs}
+\usepackage[utf8]{inputenc}
+\usepackage[nf]{coelacanth}
+\usepackage[T1]{fontenc}
+
+\usepackage[a4paper, margin={1in}]{geometry}
+%% The font package uses mweights.sty which has som issues with the
+%% \normalfont command. The following two lines fixes this issue.
+\let\oldnormalfont\normalfont
+\def\normalfont{\oldnormalfont\mdseries}
+\noversenumbers
+\nosongnumbers
+% \songcolumns{1}
+% \spenalty=-10000
+% \afterpreludeskip=2pt plus 1fil
+% \beforepostludeskip=2pt plus 1fil
+
+\setlength{\sbarheight}{0pt}
+
+% \renewcommand{\lyricfont}{\large}
+\renewcommand{\printchord}[1]{\rmfamily\bf#1}
+\renewcommand{\idxauthfont}{\large\it}
+\renewcommand{\stitlefont}{
+  \rmfamily\bf\huge\baselineskip=20pt\lineskiplimit=0pt
+}
+
+\begin{document}
+
+\begin{songs}{}
+\beginsong{Anděl}[by={\normalsize Karel Kryl}]
+\beginverse
+\[G]Z rozmláce\[Emi]nýho kostela
+\[G]v krabici \[D7]s kusem mýdla,
+\[G]přinesl \[Emi]jsem si anděla,
+\[G]poláma\[D7]li mu \[G]křídla.
+\[G]Díval se \[Emi]na mě oddaně,
+\[G]já měl jsem \[D7]trochu trému.
+\[G]Tak vtiskl \[Emi]jsem mu do dlaně
+\[G]lahvičku \[D7]od par\[G]fému.
+\endverse
+\beginchorus
+\[G]A proto \[Emi]prosím, věř mi, \[G]chtěl jsem ho \[D7]žádat,
+\[G]aby mi \[Emi]mezi dveřmi \[G]pomohl \[D7]hádat,
+\[G]co mě čeká\[Emi] \[D7]a nemi\[G]ne,
+\[G]co mě čeká\[Emi] \[D7]a nemine.\[G]
+\endchorus
+\beginverse
+^Pak hlída^{li jsme} oblohu, pozoru^jíce ptáky,
+^debatu^jíce o Bohu ^{a hraní} na vojáky.
+Do tváře jsem mu neviděl, pokoušel se ji schovat,
+to asi ptákům záviděl, že mohou poletovat.
+\endverse
+\beginverse
+Když novinky mi sděloval u okna do ložnice,
+já křídla jsem mu ukoval z mosazný nábojnice...
+A tak jsem pozbyl anděla, on oknem uletěl mi,
+však přítel prý mi udělá novýho z mojí helmy.
+\endverse
+\endsong
+
+
+
+
+\end{songs}
+
+\end{document}
