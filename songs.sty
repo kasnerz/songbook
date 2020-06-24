@@ -2062,18 +2062,20 @@
 \newcommand\lrep{%
   \SB@dimen\baselineskip%
   \advance\SB@dimen-2\p@%
-  \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
-  \kern1.5\p@%
-  \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
-  \SB@repcolon%
+  {\large[:}
+%   \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
+%   \kern1.5\p@%
+%   \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
+%   \SB@repcolon%
 }
 \newcommand\rrep{%
   \SB@dimen\baselineskip%
   \advance\SB@dimen-2\p@%
-  \SB@repcolon%
-  \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
-  \kern1.5\p@%
-  \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
+  {\large:]}
+%   \SB@repcolon%
+%   \vrule\@width.5\p@\@height\SB@dimen\@depth\p@%
+%   \kern1.5\p@%
+%   \vrule\@width1.5\p@\@height\SB@dimen\@depth\p@%
 }
 \newif\ifSB@wordends
 \newif\ifSB@brokenword
