@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[nf]{coelacanth}
 \usepackage[T1]{fontenc}
+\usepackage{pdfpages}
 
 \usepackage[a4paper, margin={1in}]{geometry}
 %% The font package uses mweights.sty which has som issues with the
@@ -40,17 +41,31 @@
 \endverse
 }
 
+\renewcommand{\songchapter}{\chapter*}
+\renewcommand{\songsection}{\section*}
+\renewcommand{\idxrefsfont}{\bfseries}
+
+\renewcommand{\idxtitlefont}{\rmfamily}
+% \renewcommand{\idxlyricfont}{\rmfamily\mdseries}
+
+\renewcommand{\idxheadfont}{\bfseries\rmfamily\LARGE}
+\setlength{\idxheadwidth}{0cm}
+
 \def\caponote[#1]{
 \hspace{-0.66cm}\textit{(capo #1)}
 }
 
-\newindex{mainindex}{idxfile}
+% \newindex{mainindex}{idxfile}
+\newindex{titleidx}{titleidx}
 
 \begin{document}
 
-% \showindex[2]{Obsah}{mainindex}
+\includepdf[pages=-]{cover/cover.pdf}
+\showindex[2]{Obsah}{titleidx}
 
-\begin{songs}{}
+
+
+\begin{songs}{titleidx}
 
 % \songcolumns{2}
 \input{songs/amerika.tex}
