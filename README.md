@@ -1,11 +1,18 @@
 # Songbook
 
-![cover](cover/cover.png)
+![cover](img/cover.png) ![index](img/index.png) ![index](img/page.png)
 
 
 My personal guitar songbook. Made with :heart: using the [songs](http://songs.sourceforge.net) LaTeX package.
 
-You can either download the compiled [PDF](./songbook.pdf) or build it by yourself from the source.
+You can either download the compiled [PDF](./songbook.pdf) or 
+build it by yourself from the source.
+
+The songbook contains over 50 Czech songs and 30 songs from many other languages.
+
+:czech_republic: :us: :uk: :slovakia: :fr: :de: :netherlands: :it: :hungary: :ru: :serbia:
+
+
 
 Feel free to use for personal purposes :wink:
 
