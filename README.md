@@ -3,7 +3,7 @@
 ![cover](img/cover.png) ![index](img/index.png) ![index](img/page.png)
 
 
-My personal guitar songbook. Made with :heart: using the [songs](http://songs.sourceforge.net) LaTeX package.
+My personal guitar songbook. Made with the [songs](http://songs.sourceforge.net) LaTeX package.
 
 You can either download the **compiled [PDF](./songbook.pdf)** or 
 build it by yourself from source. 

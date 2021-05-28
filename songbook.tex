@@ -20,7 +20,7 @@
 % \beforepostludeskip=2pt plus 1fil
 
 \setlength{\sbarheight}{0pt}
-\pagenumbering{gobble}
+% \pagenumbering{gobble}
 
 \pagestyle{plain}
 
@@ -68,7 +68,7 @@
 
 \pagenumbering{gobble}
 \includepdf[pages=-]{cover/cover.pdf}
-% \showindex[2]{\LARGE Obsah}{titleidx}
+\showindex[2]{\LARGE Obsah}{titleidx}
 \pagenumbering{arabic}
 \includepdf[pages=-]{cover/czech.pdf}
 
@@ -119,10 +119,11 @@
   \input{songs/nagasaki_hirosima.tex}
   \input{songs/napojen.tex}
   \input{songs/nejlip_jim_bylo.tex}
-  % \input{songs/omnia_vincit_amor.tex}
+  \input{songs/omnia_vincit_amor.tex}
   \input{songs/panenka.tex}
   \input{songs/peterburg.tex}
   \input{songs/pirati.tex}
+  \input{songs/prolog_zivota.tex}
   \input{songs/promeny.tex}
   \input{songs/pod_dubem.tex}
   \input{songs/podvod.tex}
@@ -178,6 +179,7 @@
 \input{songs/loch_lomond.tex}
 \input{songs/lonely_day.tex}
 \input{songs/losing_my_religion.tex}
+\input{songs/mals_song.tex}
 \input{songs/moonlight_shadow.tex}
 \input{songs/nekako_najvyse.tex}
 \input{songs/neverending_story.tex}
