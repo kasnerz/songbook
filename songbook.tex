@@ -69,7 +69,8 @@
 \pagenumbering{gobble}
 \includepdf[pages=-]{cover/cover.pdf}
 \showindex[2]{\LARGE Obsah}{titleidx}
-\pagenumbering{arabic}
+% \pagenumbering{arabic}
+ \leavevmode\thispagestyle{empty}\newpage
 \includepdf[pages=-]{cover/czech.pdf}
 
 \begin{songs}{titleidx}

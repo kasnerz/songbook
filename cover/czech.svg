@@ -1425,11 +1425,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.26299501"
-     inkscape:cx="-0.41999011"
-     inkscape:cy="974.26423"
+     inkscape:zoom="0.52599002"
+     inkscape:cx="-294.94364"
+     inkscape:cy="435.50219"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer6"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
@@ -1451,7 +1451,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2252,8 +2252,8 @@
        style="fill:none;stroke:none;stroke-width:0.71044558"
        width="28.308422"
        height="39.10849"
-       x="277.19699"
-       y="-25.787205"
+       x="87.103058"
+       y="-74.446121"
        id="rect15397"
        transform="rotate(68.426007)" />
     <path
@@ -2458,21 +2458,22 @@
      inkscape:label="map"
      style="display:inline">
     <g
-       id="g1500">
+       id="g1500"
+       transform="translate(42.436733,249.93214)">
       <text
          transform="rotate(1.1420553)"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.27342319px;line-height:0;font-family:Coelacanth;-inkscape-font-specification:Coelacanth;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.02841556"
-         x="125.03404"
-         y="99.408104"
+         x="96.94371"
+         y="-98.26104"
          id="text12319-8"><tspan
            sodipodi:role="line"
            id="tspan12317-0"
-           x="125.03404"
-           y="99.408104"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.8281498px;font-family:Coelacanth;-inkscape-font-specification:'Coelacanth Bold';letter-spacing:0px;stroke-width:0.02841556">České</tspan></text>
+           x="96.94371"
+           y="-98.26104"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.57777786px;font-family:Coelacanth;-inkscape-font-specification:'Coelacanth, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.02841556">České</tspan></text>
       <g
-         transform="matrix(0.70852307,0,0,0.70852307,19.512601,-35.85097)"
+         transform="matrix(0.70852307,0,0,0.70852307,-5.1353635,-230.51959)"
          id="g2864">
         <path
            style="display:inline;opacity:1;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.37744319;stroke-miterlimit:4;stroke-dasharray:0.37744318, 0.37744318;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter2555)"

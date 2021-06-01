@@ -1425,11 +1425,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.18596556"
-     inkscape:cx="1596.1756"
-     inkscape:cy="874.11645"
+     inkscape:zoom="0.74386224"
+     inkscape:cx="358.09841"
+     inkscape:cy="459.29202"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g1565"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1023"
@@ -1451,7 +1451,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2252,8 +2252,8 @@
        style="fill:none;stroke:none;stroke-width:0.71044558"
        width="28.308422"
        height="39.10849"
-       x="277.19699"
-       y="-25.787205"
+       x="195.11351"
+       y="-88.077026"
        id="rect15397"
        transform="rotate(68.426007)" />
     <g
@@ -2493,9 +2493,9 @@
        transform="matrix(0.31354153,0,0,0.26110492,-3.8491798e-4,-10.294929)" />
     <g
        id="g1565"
-       transform="translate(0,32.713996)">
+       transform="translate(-26.157023,195.69237)">
       <g
-         transform="translate(32.193259,-194.65302)"
+         transform="matrix(0.85242187,0,0,0.85242187,81.107926,-259.53796)"
          id="g5177"
          style="display:inline">
         <path
@@ -2653,14 +2653,14 @@
          transform="rotate(1.1420553)"
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.27342319px;line-height:0;font-family:Coelacanth;-inkscape-font-specification:Coelacanth;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.02841556"
-         x="117.05978"
-         y="64.539711"
+         x="153.30116"
+         y="-39.464569"
          id="text12319-8"><tspan
            sodipodi:role="line"
            id="tspan12317-0"
-           x="117.05978"
-           y="64.539711"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.39999962px;font-family:Coelacanth;-inkscape-font-specification:'Coelacanth Bold';letter-spacing:0px;stroke-width:0.02841556">Světové</tspan></text>
+           x="153.30116"
+           y="-39.464569"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:22.57777786px;font-family:Coelacanth;-inkscape-font-specification:'Coelacanth, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;writing-mode:lr-tb;text-anchor:start;stroke-width:0.02841556">Světové</tspan></text>
     </g>
   </g>
   <style
