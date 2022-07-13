@@ -65,8 +65,19 @@
 }
 
 % \newindex{mainindex}{idxfile}
+
+\usepackage{xpatch}
+
+\makeatletter
+\xpatchcmd{\SB@@@beginsong}
+  {\SB@addtoindexes\songtitle}
+  {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ -- \songauthors\fi}}
+  {}{}
+\makeatother
+
 \newindex{titleidx}{titleidx}
 \indexsongsas{titleidx}{\thepage}
+
 \begin{document}
 
 \pagenumbering{gobble}
@@ -78,17 +89,17 @@
 \begin{center}
   \vfill
 
-  Tento zpěvník obsahuje texty a akordy k 234 písničkám -- v češtině, angličtině i řadě dalších jazyků. Písničky jsem vybíral podle svého hudebního vkusu, za inspiraci děkuji i řadě lidí ze svého okolí.  \\ \vspace*{0.5cm}
+  Tento zpěvník obsahuje texty a akordy k 234 písničkám -- v češtině, angličtině i řadě dalších jazyků. Písničky jsem vybíral podle svého hudebního vkusu, i když za inspiraci děkuji i řadě lidí ze svého okolí.  \\ \vspace*{0.5cm}
 
-Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) postupně rostly moje schopnosti hraní na kytaru. Tato verze vznikla v červenci 2022, existuje i v tištené podobě a je prozatím finální. \\ \vspace*{0.5cm}
+Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) postupně rostly moje schopnosti hraní na kytaru. Tato verze byla dokončena v červenci 2022, existuje i v tištené podobě a je prozatím finální. \\ \vspace*{0.5cm}
 
-  Texty a akordy pocházejí z \texttt{ultimate-guitar.com}, \texttt{pisnicky-akordy.cz}, \texttt{supermusic.cz} a řady dalších. Speciální poděkování patří \texttt{chordu.com} za heuristické určení akordů k těm pár písničkám, co nebyly jinde k nalezení.  \\ \vspace*{0.5cm}
+  Texty a akordy pocházejí z \texttt{ultimate-guitar.com}, \texttt{pisnicky-akordy.cz}, \texttt{supermusic.cz} a řady dalších. Všem dobrovolníkům, kteří texty a akordy na tyto servery přidávali, tímto děkuji. Speciální poděkování pak patří \texttt{chordu.com} za heuristické určení akordů k těm pár písničkám, co nebyly jinde k nalezení.  \\ \vspace*{0.5cm}
 
-  K převodu akordů a textu z webu do \LaTeX u jsem používal vlastní skript \texttt{chords2latex}, který mi ušetřil spoustu ručního opisování. V řadě případů jsou akordy následně lehce upraveny, případně transponovány (poznámka o capu určuje tóninu originálu). \\ \vspace*{0.5cm}
+  Písničky jsou vysázeny v \LaTeX u pomocí balíčku \texttt{songs}. K převodu akordů a textu z webu do \LaTeX u jsem používal vlastní skript \texttt{chords2latex}, který mi ušetřil spoustu ručního opisování. V řadě případů jsou akordy lehce upraveny, případně transponovány (poznámky o capu určují tóninu originálu). \\ \vspace*{0.5cm}
 
   Zpěvník jako PDF soubor, zdrojové kódy a skript pro převod akordů z webu do \LaTeX u je k dispozici na mém Githubu: \texttt{\url{https://github.com/kasnerz/songbook}}.  \\ \vspace*{0.5cm}
 
-  Pokud Ti tenhle zpěvník poslouží, budu rád za jakýkoliv feedback! \\ \vspace*{0.5cm}
+  Pokud právě čteš tento text a zpěvník Ti nějakým způsobem posloužil, budu rád za feedback! \\ \vspace*{0.5cm}
 
  
 \copyright 2022 Zdeněk Kasner \\ \vspace*{0.1cm}
@@ -213,9 +224,9 @@ Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s n
   \input{songs/strejcek_jonatan.tex}
   \input{songs/stvanice.tex}
   \input{songs/tam_u_nebeskych_bran.tex}
+  \input{songs/tesar.tex}
   \input{songs/ten_vitr_to_vi.tex}
   \input{songs/tereza.tex}
-  \input{songs/tesar.tex}
   \input{songs/tesinska.tex}
   \input{songs/toulavej.tex}
   \input{songs/tri_krize.tex}
@@ -261,8 +272,8 @@ Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s n
   \input{songs/dust_in_the_wind.tex}
   \input{songs/farewell.tex}
   \input{songs/fear_of_the_dark.tex}
-  \input{songs/forever_young.tex}
   \input{songs/flurry_rush.tex}
+  \input{songs/forever_young.tex}
   \input{songs/from_gods_perspective.tex}
   \input{songs/gyongyhaju_lany.tex}
   \input{songs/hallelujah.tex}
@@ -337,8 +348,8 @@ Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s n
   \input{songs/viva_la_vida.tex}
   \input{songs/voda_co_ma_drzi_nad_vodou.tex}
   \input{songs/war_of_the_thrones.tex}
-  \input{songs/welcome_to_my_life.tex}
   \input{songs/welcome_to_the_internet.tex}
+  \input{songs/welcome_to_my_life.tex}
   \input{songs/wellerman.tex}
   \input{songs/welcome_home_son.tex}
   \input{songs/we_are_the_champions.tex}
