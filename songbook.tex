@@ -6,6 +6,7 @@
 \usepackage[T1]{fontenc}
 \usepackage{pdfpages}
 \usepackage{hyperref}
+\usepackage{cclicenses}
 
 \usepackage[a4paper, margin={1in}]{geometry}
 
@@ -72,7 +73,30 @@
 \includepdf[pages=-]{cover/cover.pdf}
 \showindex[2]{\LARGE Obsah}{titleidx}
 \pagenumbering{arabic}
- \leavevmode\thispagestyle{empty}\newpage
+ \leavevmode\thispagestyle{empty}
+
+\begin{center}
+  \vfill
+
+  Tento zpěvník obsahuje texty a akordy k 234 písničkám -- v češtině, angličtině i řadě dalších jazyků. Písničky jsem vybíral podle svého hudebního vkusu, za inspiraci děkuji i řadě lidí ze svého okolí.  \\ \vspace*{0.5cm}
+
+Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) postupně rostly moje schopnosti hraní na kytaru. Tato verze vznikla v červenci 2022, existuje i v tištené podobě a je prozatím finální. \\ \vspace*{0.5cm}
+
+  Texty a akordy pocházejí z \texttt{ultimate-guitar.com}, \texttt{pisnicky-akordy.cz}, \texttt{supermusic.cz} a řady dalších. Speciální poděkování patří \texttt{chordu.com} za heuristické určení akordů k těm pár písničkám, co nebyly jinde k nalezení.  \\ \vspace*{0.5cm}
+
+  K převodu akordů a textu z webu do \LaTeX u jsem používal vlastní skript \texttt{chords2latex}, který mi ušetřil spoustu ručního opisování. V řadě případů jsou akordy následně lehce upraveny, případně transponovány (poznámka o capu určuje tóninu originálu). \\ \vspace*{0.5cm}
+
+  Zpěvník jako PDF soubor, zdrojové kódy a skript pro převod akordů z webu do \LaTeX u je k dispozici na mém Githubu: \texttt{\url{https://github.com/kasnerz/songbook}}.  \\ \vspace*{0.5cm}
+
+  Pokud Ti tenhle zpěvník poslouží, budu rád za jakýkoliv feedback! \\ \vspace*{0.5cm}
+
+ 
+\copyright 2022 Zdeněk Kasner \\ \vspace*{0.1cm}
+\texttt{zdenek.kasner@gmail.com} \\ \vspace*{0.5cm}
+\byncsa
+\end{center}
+
+
 \includepdf[pages=-]{cover/czech.pdf}
 
 \begin{songs}{titleidx}
@@ -235,6 +259,7 @@
   \sclearpage
   \input{songs/drunken_sailor.tex}
   \input{songs/dust_in_the_wind.tex}
+  \input{songs/farewell.tex}
   \input{songs/fear_of_the_dark.tex}
   \input{songs/forever_young.tex}
   \input{songs/flurry_rush.tex}
@@ -271,6 +296,8 @@
   \input{songs/loch_lomond.tex}
   \input{songs/lonely_day.tex}
   \input{songs/losing_my_religion.tex}
+  \input{songs/lost_in_space.tex}
+  \input{songs/lucifer.tex}
   \input{songs/mals_song.tex}
   \input{songs/miss_conception.tex}
   \input{songs/moglo_byc_nic.tex}
