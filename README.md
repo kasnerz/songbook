@@ -2,7 +2,7 @@
 
 ![cover](img/cover.png) ![index](img/index.png) ![index](img/page.png)
 
-My personal guitar songbook. Made with the [songs](http://songs.sourceforge.net) LaTeX package. Contains 234 songs in Czech, English, and other languages.
+My personal guitar songbook. Made with the [songs](http://songs.sourceforge.net) LaTeX package. Contains 235 songs in Czech, English, and other languages.
 
 :czech_republic: :us: :uk: :slovakia: :fr: :de: :netherlands: :it: :hungary: :ru: :serbia: :finland: :poland:
 
