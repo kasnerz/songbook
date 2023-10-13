@@ -224,7 +224,8 @@ function rotate(s)
        unicode.utf8.find(t, "^%s+%S", n+#pre+1) then
       local len = unicode.utf8.len(pre)
       local x, y, z = unicode.utf8.match(unicode.utf8.sub(s,n+len+1),"^%s+(%W*)(%w?)(.*)$")
-      return s:sub(1,n) .. x .. unicode.utf8.upper(y) .. z:gsub("\\%s","%0\1"):match("^(.-)%s*$"):gsub("\1","") .. ",~" .. unicode.utf8.sub(s,1+n,n+len)
+      return s:sub(1,n) .. x .. unicode.utf8.upper(y) .. z:gsub("\\%s","%0\1"):match("^(.-)%s*$"):gsub("\1","")
+      -- return s:sub(1,n) .. x .. unicode.utf8.upper(y) .. z:gsub("\\%s","%0\1"):match("^(.-)%s*$"):gsub("\1","") .. ",~" .. unicode.utf8.sub(s,1+n,n+len)
     end
   end
   return s
