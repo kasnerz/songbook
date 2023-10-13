@@ -75,21 +75,39 @@
   {}{}
 \makeatother
 
-\newindex{titleidx}{titleidx}
-\indexsongsas{titleidx}{\thepage}
+\sepindexesfalse
+
+\newindex{idx1czech}{idx1czech}
+\newindex{idx1international}{idx1international}
+\newindex{idx2czech}{idx2czech}
+\newindex{idx2international}{idx2international}
+\indexsongsas{idx1czech}{\thepage}
+\indexsongsas{idx1international}{\thepage}
+\indexsongsas{idx2czech}{\thepage}
+\indexsongsas{idx2international}{\thepage}
 
 \begin{document}
 
 \pagenumbering{gobble}
 \includepdf[pages=-]{cover/cover.pdf}
-\showindex[2]{\LARGE Obsah}{titleidx}
-\pagenumbering{arabic}
+{\noindent \Huge \textbf{Část I}}
+\vspace{0.5cm}
+\showindex[2]{\LARGE České}{idx1czech}
+\vspace{1cm}
+\showindex[2]{\LARGE Zahraniční}{idx1international}
+\vspace{1cm}
+{\noindent \Huge \textbf{Část II}}
+\vspace{1cm}
+\showindex[2]{\LARGE České}{idx2czech}
+\vspace{1cm}
+\showindex[2]{\LARGE Zahraniční}{idx2international}
+\pagenumbering{arabic} 
 \leavevmode\thispagestyle{empty} \newpage
 
 
 \includepdf[pages=-]{cover/czech.pdf}
 
-\begin{songs}{titleidx}
+\begin{songs}{idx1czech}
 
   % \songcolumns{2}
   \input{songs/amerika.tex}
@@ -222,8 +240,10 @@
   \input{songs/zase_se_budim.tex}
   \input{songs/za_svou_pravdou_stat.tex}
   \input{songs/zatanci.tex}
+\end{songs}
+\begin{songs}{idx1international}
   \sclearpage
-  \leavevmode\thispagestyle{empty}\newpage
+  \leavevmode\thispagestyle{empty}\newpage 
   \includepdf[pages=-]{cover/international.pdf}
   % \leavevmode\thispagestyle{empty}\newpage
 
@@ -345,6 +365,8 @@
   % \input{songs/katusa.tex}
   % \input{songs/i_will_survive.tex}
   % \input{songs/was_wollen_wir_trinken.tex}
+\end{songs}
+\begin{songs}{idx2czech}
   \sclearpage
   \input{songs/amazonka.tex}
   \input{songs/cerny_brejle.tex}
@@ -358,6 +380,8 @@
   \input{songs/sen.tex}
   \input{songs/pohar_a_kalich.tex}
   \sclearpage
+\end{songs}
+\begin{songs}{idx2international}
   \input{songs/a_little_piece_of_heaven.tex}
   \input{songs/bayraktar.tex}
   \input{songs/kalyna.tex}
