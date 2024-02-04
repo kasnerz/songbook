@@ -1,6 +1,6 @@
 # Songbook
 
-[![Download](https://img.shields.io/badge/Download-PDF-00665C)](https://github.com/kasnerz/songbook/raw/master/songbook.pdf) [![View](https://img.shields.io/badge/View-Overleaf-138A07)](https://github.com/kasnerz/songbook/raw/master/songbook.pdf)
+[![Download](https://img.shields.io/badge/Download-PDF-00665C)](https://github.com/kasnerz/songbook/raw/master/songbook.pdf) [![View](https://img.shields.io/badge/View-Overleaf-138A07)](https://www.overleaf.com/read/vhgxgnvpfyqv#86a034)
 
 My personal guitar songbook. Contains 320 songs, primarily in Czech and English but also in many other languages.
 
