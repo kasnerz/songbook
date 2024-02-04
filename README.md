@@ -2,7 +2,7 @@
 
 [![Download](https://img.shields.io/badge/Download-PDF-00665C)](https://github.com/kasnerz/songbook/raw/master/songbook.pdf) [![View](https://img.shields.io/badge/View-Overleaf-138A07)](https://www.overleaf.com/read/vhgxgnvpfyqv#86a034)
 
-My personal guitar songbook. Contains 320 songs, primarily in Czech and English but also in many other languages.
+My personal guitar songbook. Contains 320+ songs, primarily in Czech and English but also in other languages.
 
 :czech_republic: :us: :uk: :slovakia: :fr: :de: :netherlands: :it: :hungary: :ru: :serbia: :finland: :poland: :ukraine:
 
@@ -15,12 +15,14 @@ In this branch, both parts are **merged in the single PDF**. If you want to acce
 
 ![cover](img/cover.png) ![index](img/index.png) ![index](img/page.png)
 
-
-For building the songbook from source, first make sure you have [TeX Live](https://www.tug.org/texlive/) installed. Then you can use the `latexmk` command.
-
 The songbook is made with the [songs](http://songs.sourceforge.net) LaTeX package. 
 
-[Here](https://github.com/kasnerz/chords2latex) is the script I am using for converting chords to LaTeX.
+If you want to build your version of the songbook, the easiest way to do it is using [Overleaf](https://www.overleaf.com/). Here is the [view-only version](https://www.overleaf.com/read/vhgxgnvpfyqv#86a034) of this songbook on Overleaf.
+
+For building the songbook from source locally, first make sure you have [TeX Live](https://www.tug.org/texlive/) installed. Then you can use the `latexmk` command.
+
+
+Also, [here](https://github.com/kasnerz/chords2latex) is the script I am using for converting chords I find online to LaTeX.
 
 
 Feel free to use for personal purposes :wink:
