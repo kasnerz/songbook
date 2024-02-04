@@ -64,6 +64,10 @@
 \hspace{-0.66cm}\textit{(capo #1)}
 }
 
+\def\chordskip{
+  \vspace{-0.5cm}
+}
+
 % \newindex{mainindex}{idxfile}
 
 \usepackage{xpatch}
@@ -75,21 +79,42 @@
   {}{}
 \makeatother
 
-\newindex{titleidx}{titleidx}
-\indexsongsas{titleidx}{\thepage}
+\sepindexesfalse
+
+\newindex{idx1czech}{idx1czech}
+\newindex{idx1international}{idx1international}
+\newindex{idx2czech}{idx2czech}
+\newindex{idx2international}{idx2international}
+\indexsongsas{idx1czech}{\thepage}
+\indexsongsas{idx1international}{\thepage}
+\indexsongsas{idx2czech}{\thepage}
+\indexsongsas{idx2international}{\thepage}
 
 \begin{document}
 
 \pagenumbering{gobble}
 \includepdf[pages=-]{cover/cover.pdf}
-\showindex[2]{\LARGE Obsah}{titleidx}
-\pagenumbering{arabic}
- \leavevmode\thispagestyle{empty} \newpage
+{\noindent \Huge \textbf{Část I}}
+\vspace{0.5cm}
+\showindex[2]{\huge České}{idx1czech}
+\vspace{1cm}
+\showindex[2]{\huge Zahraniční}{idx1international}
+\vspace{1cm}
+{\noindent \Huge \textbf{Část II}}
+\vspace{1cm}
+\showindex[2]{\huge České}{idx2czech}
+\vspace{1cm}
+\showindex[2]{\huge Zahraniční}{idx2international}
+\pagenumbering{arabic} 
+\leavevmode\thispagestyle{empty} \newpage
 
 
+\includepdf[pages=-]{cover/part1.pdf}
+\sclearpage
+\newpage
 \includepdf[pages=-]{cover/czech.pdf}
 
-\begin{songs}{titleidx}
+\begin{songs}{idx1czech}
 
   % \songcolumns{2}
   \input{songs/amerika.tex}
@@ -123,7 +148,7 @@
   \input{songs/holubi_dum.tex}
   \input{songs/hruska.tex}
   \input{songs/hudsonske_sify.tex}
-  \sclearpage
+  % \sclearpage
   \input{songs/huslicky.tex}
   \input{songs/hvezdar.tex}
   \input{songs/chci_zas_v_tobe_spat.tex}
@@ -222,12 +247,14 @@
   \input{songs/zase_se_budim.tex}
   \input{songs/za_svou_pravdou_stat.tex}
   \input{songs/zatanci.tex}
+\end{songs}
+\begin{songs}{idx1international}
   \sclearpage
-  \leavevmode\thispagestyle{empty}\newpage
+  \leavevmode\thispagestyle{empty}\newpage 
   \includepdf[pages=-]{cover/international.pdf}
   % \leavevmode\thispagestyle{empty}\newpage
 
-  % \sclearpage
+  \sclearpage
   \input{songs/american_pie.tex}
   \input{songs/all_my_loving.tex}
   \input{songs/auld_lang_syne.tex}
@@ -341,21 +368,119 @@
   \input{songs/yesterday.tex}
   \input{songs/zombie.tex}
   \input{songs/4_chords.tex}
-  % \input{songs/divoke_kone.tex}
-  % \input{songs/domino.tex}
   % \input{songs/katusa.tex}
   % \input{songs/i_will_survive.tex}
-  % \input{songs/was_wollen_wir_trinken.tex}
   
 \end{songs}
+\includepdf[pages=-]{cover/part2.pdf}
+\includepdf[pages=-]{cover/czech.pdf}
+\begin{songs}{idx2czech}
+  \sclearpage
+  \input{songs/amazonka.tex}
+  \input{songs/andele.tex}
+  \input{songs/ani_k_staru.tex}
+  \input{songs/az_to_se_mnou_sekne.tex}
+  \input{songs/cerny_brejle.tex}
+  \input{songs/divoke_kone.tex}
+  \input{songs/dobre_rano.tex}
+  \input{songs/gabreta.tex}
+  \input{songs/hajny_je_lesa_pan.tex}
+  \input{songs/hleda_se_zena.tex}
+  \input{songs/hvezda_na_vrbe.tex}
+  \input{songs/jedno_rano.tex}
+  \input{songs/jelen.tex}
+  \input{songs/jo_tresne_zraly.tex}
+  \input{songs/julie.tex}
+  \input{songs/kousek_lasky.tex}
+  \input{songs/lokomotiva.tex}
+  % \input{songs/nakup.tex}
+  \input{songs/medove.tex}
+  \input{songs/modlitba_pro_partu.tex}
+  \input{songs/okor.tex}
+  \input{songs/pazitka.tex}
+  \input{songs/pedofil.tex}
+  \input{songs/plakala.tex}
+  \input{songs/pohar_a_kalich.tex}
+  \input{songs/pochod_marodu.tex}
+  \input{songs/promin.tex}
+  \input{songs/psi_balada.tex}
+  \input{songs/sen.tex}
+  \input{songs/severni_vitr.tex}
+  \input{songs/sit.tex}
+  \input{songs/srouby_do_hlavy.tex}
+  \input{songs/stesti_je_krasna_vec.tex}
+  \input{songs/studentska_halenka.tex}
+  \input{songs/zbloudily_korab.tex}
+  \input{songs/zdalo_se_ti.tex}
+  \input{songs/zena.tex}
+  \sclearpage
+\end{songs}
+\includepdf[pages=-]{cover/international.pdf}
+\begin{songs}{idx2international}
+  \input{songs/a_little_piece_of_heaven.tex}
+  \input{songs/bayraktar.tex}
+  \input{songs/battle_born.tex}
+  \input{songs/big_in_japan.tex}
+  \input{songs/black_sheep.tex}
+  % \input{songs/leaving_on_a_jet_plane.tex}
+  \input{songs/czeska_szanta.tex}
+  \input{songs/dechire.tex}
+  \input{songs/domino.tex}
+  \input{songs/dream_on.tex}
+  \input{songs/eblouie_par_la_nuit.tex}
+  \input{songs/emmenez_moi.tex}
+  \input{songs/every_breath_you_take.tex}
+  \input{songs/girl.tex}
+  \input{songs/happy_christmas.tex}
+  \input{songs/heaven_nor_hell.tex}
+  % \input{songs/i_dont_want_to_miss_a_thing.tex}
+  \input{songs/i_still_havent_found_what_im_looking_for.tex}
+  \input{songs/in_my_life.tex}
+  \input{songs/in_the_shadows.tex}
+  \input{songs/ironic.tex}
+  \input{songs/i_see_fire.tex}
+  \sclearpage
+  \input{songs/la_fee.tex}
+  \input{songs/liberation.tex}
+  \input{songs/live_is_life.tex}
+  \sclearpage
+  \input{songs/mad_world.tex}
+  \input{songs/metal_drums.tex}
+  \input{songs/mia.tex}
+  \input{songs/m-i-a.tex}
+  \sclearpage
+  \input{songs/mr_brightside.tex}
+  \input{songs/my_selene.tex}
+  \input{songs/nebude_to_lahke.tex}
+  \input{songs/nightswimming.tex}
+  \input{songs/nothing_else_matters.tex}
+  \input{songs/kalyna.tex}
+  \input{songs/rancorous_heart.tex}
+  \input{songs/smells_like_teen_spirit.tex}
+  \input{songs/sweet_dreams.tex}
+  \input{songs/t_smidje.tex}
+  \input{songs/the_fox_the_crow_and_the_cookie.tex}
+  \input{songs/crow_owl_dove.tex}
+  \input{songs/islander.tex}
+  \input{songs/total_entertainment_forever.tex}
+  \input{songs/carolean_prayer.tex}
+  \input{songs/end_of_this_chapter.tex}
+  \input{songs/tunnel_of_love.tex}
+  \input{songs/under_the_bridge.tex}
+  \input{songs/unforgiven.tex}
+  \sclearpage
+  \input{songs/was_wollen_wir_trinken.tex}
+  \input{songs/white_womans_instagram.tex}
 
-\leavevmode\thispagestyle{empty}
+\end{songs}
+
+% \leavevmode\thispagestyle{empty}
 \begin{center}
   \vfill
 
   Tento zpěvník obsahuje texty a akordy k 235 písničkám -- především v češtině a angličtině, ale i v řadě dalších jazyků. Písničky jsem vybíral podle svého hudebního vkusu, kromě toho děkuji za inspiraci i lidem ze svého okolí.  \\ \vspace*{0.5cm}
 
-Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) rostly moje schopnosti hraní na kytaru. Tato verze byla dokončena v červenci 2022, existuje i v tištené podobě a je prozatím finální. \\ \vspace*{0.5cm}
+  Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) rostly moje schopnosti hraní na kytaru. Tato verze byla dokončena v červenci 2022, existuje i v tištené podobě a je prozatím finální. \\ \vspace*{0.5cm}
 
   Texty a akordy pocházejí z naprosté většiny ze stránek \texttt{ultimate-guitar.com}, \texttt{pisnicky-akordy.cz} a \texttt{supermusic.cz}. Všem dobrovolníkům, kteří texty a akordy na tyto servery přidávali, tímto děkuji. Speciální poděkování pak patří \texttt{chordu.com} za heuristické určení akordů k těm pár písničkám, co nebyly jinde k nalezení.  \\ \vspace*{0.5cm}
 
@@ -365,12 +490,12 @@ Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s n
 
   Pokud Ti zpěvník nějakým způsobem posloužil, budu rád za feedback! \\ \vspace*{0.5cm}
 
- 
-\copyright 2022 Zdeněk Kasner \\ \vspace*{0.1cm}
-\texttt{zdenek.kasner@gmail.com} \\ \vspace*{0.5cm}
-\byncsa
+
+  \copyright 2022 Zdeněk Kasner \\ \vspace*{0.1cm}
+  \texttt{zdenek.kasner@gmail.com} \\ \vspace*{0.5cm}
+  \byncsa
 \end{center}
 
-% \leavevmode\thispagestyle{empty}\newpage
-% \includepdf[pages=-]{cover/last.pdf}
+% % \leavevmode\thispagestyle{empty}\newpage
+% % \includepdf[pages=-]{cover/last.pdf}
 \end{document}
