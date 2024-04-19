@@ -203,7 +203,8 @@ function setstartchars(songs)
   end
 end
 
-wt_prefix = { A=true, THE=true }
+wt_prefix = { }
+-- wt_prefix = { A=true, THE=true }
 wt_and = { AND=true }
 wt_by = { BY=true }
 wt_unknown = { UNKNOWN=true }
