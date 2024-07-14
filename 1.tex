@@ -1,123 +1,25 @@
-\documentclass{article}
-\usepackage{ifpdf}
-\usepackage{microtype}
-\usepackage[noshading,chorded]{songs}
-\usepackage[utf8]{inputenc}
-\usepackage[nf]{coelacanth}
-\usepackage[T1]{fontenc}
-\usepackage{pdfpages}
-\usepackage{hyperref}
-\usepackage{cclicenses}
-
-\usepackage[a4paper, margin={1in}]{geometry}
-
-%% The font package uses mweights.sty which has som issues with the
-%% \normalfont command. The following two lines fixes this issue.
-\let\oldnormalfont\normalfont
-\def\normalfont{\oldnormalfont\mdseries}
-\noversenumbers
-\nosongnumbers
-% \songcolumns{1}
-% \spenalty=-10000
-% \afterpreludeskip=2pt plus 1fil
-% \beforepostludeskip=2pt plus 1fil
-
-\setlength{\sbarheight}{0pt}
-% \pagenumbering{gobble}
-
-
-\pagestyle{plain}
-
-\renewcommand{\flatsymbol}{m}
-
-% \renewcommand{\lyricfont}{\large}
-\renewcommand{\printchord}[1]{\rmfamily\bf#1}
-\renewcommand{\idxauthfont}{\large\it}
-\renewcommand{\stitlefont}{
-  \rmfamily\bf\huge\baselineskip=20pt\lineskiplimit=0pt
-}
-
-\notenames{A}{H}{C}{D}{E}{F}{G}
-
-\def\refchorus{
-\beginverse
-\vspace{-0.15in}
-\hspace{0.25in}\textbf{Ref.}
-\vspace{-0.05in}
-\endverse
-}
-
-\renewcommand{\songtarget}[2]
-{\pdfbookmark[#1]{\thesongnum. \songtitle}{#2}}
-\renewcommand{\songlink}[2]{\hyperlink{#1}{#2}}
-
-\renewcommand{\songchapter}{\chapter*}
-\renewcommand{\songsection}{\section*}
-\renewcommand{\idxrefsfont}{\bfseries}
-
-\renewcommand{\idxtitlefont}{\rmfamily}
-% \renewcommand{\idxlyricfont}{\rmfamily\mdseries}
-
-\renewcommand{\idxheadfont}{\bfseries\rmfamily}
-\setlength{\idxheadwidth}{0cm}
-
-\def\caponote[#1]{
-\hspace{-0.66cm}\textit{(capo #1)}
-}
-
-\def\chordskip{
-  \vspace{-0.5cm}
-}
-
-% \newindex{mainindex}{idxfile}
-
-\usepackage{xpatch}
-
-\makeatletter
-\xpatchcmd{\SB@@@beginsong}
-  {\SB@addtoindexes\songtitle}
-  {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ -- \songauthors\fi}}
-  {}{}
-\makeatother
-
-\sepindexesfalse
+% !TeX root = 1.tex
+\input{preamble.tex}
 
 \newindex{idx1czech}{toc/idx1czech}
 \newindex{idx1international}{toc/idx1international}
-\newindex{idx2czech}{toc/idx2czech}
-\newindex{idx2international}{toc/idx2international}
+
 \indexsongsas{idx1czech}{\thepage}
 \indexsongsas{idx1international}{\thepage}
-\indexsongsas{idx2czech}{\thepage}
-\indexsongsas{idx2international}{\thepage}
-
+ 
 \begin{document}
 
 \pagenumbering{gobble}
 \includepdf[pages=-]{cover/cover.pdf}
-{\noindent \Huge \textbf{Část I}}
-\vspace{0.5cm}
-\showindex[2]{\huge České}{idx1czech}
-\vspace{1cm}
-\showindex[2]{\huge Zahraniční}{idx1international}
-\vspace{1cm}
-{\noindent \Huge \textbf{Část II}}
-\vspace{1cm}
-\showindex[2]{\huge České}{idx2czech}
-\vspace{1cm}
-\showindex[2]{\huge Zahraniční}{idx2international}
-\pagenumbering{arabic} 
-\leavevmode\thispagestyle{empty} \newpage
+\showindex[2]{\LARGE Obsah}{idx1czech}
+\showindex[2]{}{idx1international}
 
-
-\includepdf[pages=-]{cover/part1.pdf}
 \sclearpage
 \newpage
 \includepdf[pages=-]{cover/czech.pdf}
 
+\pagenumbering{arabic} 
 \begin{songs}{idx1czech}
-
-  % \songcolumns{2}
   \input{songs/amerika.tex}
   \input{songs/andel.tex}
   \input{songs/bara.tex}
@@ -371,154 +273,8 @@
   \input{songs/4_chords.tex}
   % \input{songs/katusa.tex}
   % \input{songs/i_will_survive.tex}
-  
-\end{songs}
-\includepdf[pages=-]{cover/part2.pdf}
-\sclearpage
-\leavevmode\thispagestyle{empty}\newpage 
-\includepdf[pages=-]{cover/czech.pdf}
-\begin{songs}{idx2czech}
-  \sclearpage
-  \input{songs/amazonka.tex}
-  \input{songs/andele.tex}
-  \input{songs/ani_k_staru.tex}
-  \input{songs/aranka_umi_hula_hop.tex}
-  \input{songs/az_to_se_mnou_sekne.tex}
-  \input{songs/baroko.tex}
-  \input{songs/cerny_brejle.tex}
-  \input{songs/divoke_kone.tex}
-  \input{songs/dobre_rano.tex}
-  \input{songs/gabreta.tex}
-  \input{songs/hajny_je_lesa_pan.tex}
-  \input{songs/hleda_se_zena.tex}
-  \input{songs/hvezda_na_vrbe.tex}
-  \input{songs/jedno_rano.tex}
-  \input{songs/jelen.tex}
-  \input{songs/jo_tresne_zraly.tex}
-  \input{songs/julie.tex}
-  \input{songs/kousek_lasky.tex}
-  \input{songs/laciny_vino.tex}
-  \input{songs/lokomotiva.tex}
-  \input{songs/lachtani.tex}
-  % \input{songs/nakup.tex}
-  \input{songs/medove.tex}
-  \input{songs/nosorozec.tex}
-  \input{songs/modlitba_pro_partu.tex}
-  \input{songs/okor.tex}
-  \input{songs/pazitka.tex}
-  \input{songs/plakala.tex}
-  \input{songs/pedofil.tex}
-  \input{songs/pohar_a_kalich.tex}
-  \input{songs/pochod_marodu.tex}
-  \sclearpage
-  \input{songs/prachovske_skaly.tex}
-  \input{songs/promin.tex}
-  \input{songs/psi_balada.tex}
-  \input{songs/rosa_na_kolejich.tex}
-  \input{songs/sen.tex}
-  \input{songs/severni_vitr.tex}
-  \input{songs/sibyla.tex}
-  \input{songs/sit.tex}
-  \input{songs/snazime_se_preslechnout.tex}
-  \input{songs/staryho_kozla_se_ptej.tex}
-  \input{songs/srouby_do_hlavy.tex}
-  \input{songs/venku_zuri_jaro.tex}
-  % \input{songs/stesti_je_krasna_vec.tex}
-  % \input{songs/studentska_halenka.tex}
-  \input{songs/zbloudily_korab.tex}
-  \input{songs/zdalo_se_ti.tex}
-  \input{songs/zitra_rano_v_pet.tex}
-  \input{songs/zena.tex}
-  \sclearpage
-\end{songs}
-\includepdf[pages=-]{cover/international.pdf}
-\begin{songs}{idx2international}
-  \input{songs/a_little_piece_of_heaven.tex}
-  \input{songs/bayraktar.tex}
-  \input{songs/battle_born.tex}
-  \input{songs/big_in_japan.tex}
-  % \input{songs/black_sheep.tex}
-  % \input{songs/leaving_on_a_jet_plane.tex}
-  \input{songs/czeska_szanta.tex}
-  \input{songs/day_eleven_love.tex}
-  \input{songs/dechire.tex}
-  \input{songs/domino.tex}
-  \input{songs/dream_on.tex}
-  \input{songs/eblouie_par_la_nuit.tex}
-  \input{songs/emmenez_moi.tex}
-  % \input{songs/every_breath_you_take.tex}
-  \input{songs/girl.tex}
-  \input{songs/happy_christmas.tex}
-  \input{songs/heaven_nor_hell.tex}
-  \input{songs/hey_there_delilah.tex}
-  % \input{songs/i_dont_want_to_miss_a_thing.tex}
-  \input{songs/i_still_havent_found_what_im_looking_for.tex}
-  \input{songs/in_my_life.tex}
-  \input{songs/in_the_shadows.tex}
-  \input{songs/ironic.tex}
-  \input{songs/i_see_fire.tex}
-  \sclearpage
-  \input{songs/j_me_tire.tex}
-  \input{songs/la_fee.tex}
-  \input{songs/liberation.tex}
-  \input{songs/live_is_life.tex}
-  \sclearpage
-  \input{songs/metal_drums.tex}
-  \input{songs/mad_world.tex}
-  \input{songs/mia.tex}
-  \input{songs/m-i-a.tex}
-  \sclearpage
-  \input{songs/mr_brightside.tex}
-  \input{songs/my_selene.tex}
-  \input{songs/nebude_to_lahke.tex}
-  \input{songs/nightswimming.tex}
-  \input{songs/nothing_else_matters.tex}
-  \input{songs/kalyna.tex}
-  \input{songs/rancorous_heart.tex}
-  \input{songs/smells_like_teen_spirit.tex}
-  \input{songs/sweet_dreams.tex}
-  \input{songs/t_smidje.tex}
-  \sclearpage
-  \input{songs/carolean_prayer.tex}
-  \input{songs/islander.tex}
-  \input{songs/the_fox_the_crow_and_the_cookie.tex}
-  \input{songs/crow_owl_dove.tex}
-  \input{songs/the_night_they_moved_the_house.tex}
-  \input{songs/this_time_imperfect.tex}
-  \input{songs/total_entertainment_forever.tex}
-  % \input{songs/end_of_this_chapter.tex}
-  \input{songs/tunnel_of_love.tex}
-  \input{songs/under_the_bridge.tex}
-  \input{songs/unforgiven.tex}
-  \sclearpage
-  \input{songs/was_wollen_wir_trinken.tex}
-  \input{songs/web_of_lies.tex}
-  \input{songs/white_womans_instagram.tex}
-
 \end{songs}
 
-% \leavevmode\thispagestyle{empty}
-\begin{center}
-  \vfill
+\input{epilogue.tex}
 
-  Tento zpěvník obsahuje texty a akordy k více než 320 písničkám -- především v češtině a angličtině, ale i v řadě dalších jazyků. Písničky jsem vybíral podle svého hudebního vkusu, kromě toho děkuji za inspiraci i lidem ze svého okolí.  \\ \vspace*{0.5cm}
-
-  Zpěvník začal vznikat na začátku roku 2020 a postupně rostl, jak spolu s ním (nebo i díky němu?) rostly moje schopnosti hraní na kytaru. První verze byla dokončena a vytištěna v červenci 2022. Od té doby přibývají další písničky a připravuje se výtisk další části. \\ \vspace*{0.5cm}
-
-  Texty a akordy pocházejí z naprosté většiny ze stránek \texttt{ultimate-guitar.com}, \texttt{pisnicky-akordy.cz} a \texttt{supermusic.cz}. Všem dobrovolníkům, kteří texty a akordy na tyto servery přidávali, tímto děkuji. Speciální poděkování pak patří \texttt{chordu.com} za heuristické určení akordů k těm pár písničkám, co nebyly jinde k nalezení.  \\ \vspace*{0.5cm}
-
-  Písničky jsou vysázeny v \LaTeX u pomocí balíčku \texttt{songs}. K převodu akordů a textu z webu do \LaTeX u jsem používal vlastní skript \texttt{chords2latex}, který mi ušetřil spoustu ručního opisování. V řadě případů jsou akordy lehce upraveny, případně transponovány. Poznámky o capu určují tóninu originálu. \\ \vspace*{0.5cm}
-
-  Zpěvník jako PDF soubor, zdrojové kódy a skript pro převod akordů z webu do \LaTeX u je k dispozici na mém Githubu: \texttt{\url{https://github.com/kasnerz/songbook}}.  \\ \vspace*{0.5cm}
-
-  Pokud Ti zpěvník nějakým způsobem posloužil, budu rád za feedback! \\ \vspace*{0.5cm}
-
-
-  \copyright 2024 Zdeněk Kasner \\ \vspace*{0.1cm}
-  \texttt{zdenek.kasner@gmail.com} \\ \vspace*{0.5cm}
-  \byncsa
-\end{center}
-
-% % \leavevmode\thispagestyle{empty}\newpage
-% % \includepdf[pages=-]{cover/last.pdf}
 \end{document}

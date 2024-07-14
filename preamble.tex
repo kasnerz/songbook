@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{ifpdf}
+\usepackage{microtype}
+\usepackage[noshading,chorded]{songs}
+\usepackage[utf8]{inputenc}
+\usepackage[nf]{coelacanth}
+\usepackage[T1]{fontenc}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{cclicenses}
+
+\usepackage[a4paper, margin={1in}]{geometry}
+
+%% The font package uses mweights.sty which has som issues with the
+%% \normalfont command. The following two lines fixes this issue.
+\let\oldnormalfont\normalfont
+\def\normalfont{\oldnormalfont\mdseries}
+\noversenumbers
+\nosongnumbers
+% \songcolumns{1}
+% \spenalty=-10000
+% \afterpreludeskip=2pt plus 1fil
+% \beforepostludeskip=2pt plus 1fil
+
+\setlength{\sbarheight}{0pt}
+% \pagenumbering{gobble}
+
+
+\pagestyle{plain}
+
+\renewcommand{\flatsymbol}{m}
+
+% \renewcommand{\lyricfont}{\large}
+\renewcommand{\printchord}[1]{\rmfamily\bf#1}
+\renewcommand{\idxauthfont}{\large\it}
+\renewcommand{\stitlefont}{
+  \rmfamily\bf\huge\baselineskip=20pt\lineskiplimit=0pt
+}
+
+\notenames{A}{H}{C}{D}{E}{F}{G}
+
+\def\refchorus{
+\beginverse
+\vspace{-0.15in}
+\hspace{0.25in}\textbf{Ref.}
+\vspace{-0.05in}
+\endverse
+}
+
+\renewcommand{\songtarget}[2]
+{\pdfbookmark[#1]{\thesongnum. \songtitle}{#2}}
+\renewcommand{\songlink}[2]{\hyperlink{#1}{#2}}
+
+\renewcommand{\songchapter}{\chapter*}
+\renewcommand{\songsection}{\section*}
+\renewcommand{\idxrefsfont}{\bfseries}
+
+\renewcommand{\idxtitlefont}{\rmfamily}
+% \renewcommand{\idxlyricfont}{\rmfamily\mdseries}
+
+\renewcommand{\idxheadfont}{\bfseries\rmfamily}
+\setlength{\idxheadwidth}{0cm}
+
+\def\caponote[#1]{
+\hspace{-0.66cm}\textit{(capo #1)}
+}
+
+\def\chordskip{
+  \vspace{-0.5cm}
+}
+
+% \newindex{mainindex}{idxfile}
+
+\usepackage{xpatch}
+
+\makeatletter
+\xpatchcmd{\SB@@@beginsong}
+  {\SB@addtoindexes\songtitle}
+  {\SB@addtoindexes{\songtitle\ifx\songauthors\empty\else\ -- \songauthors\fi}}
+  {}{}
+\makeatother
+
+\sepindexesfalse
+
+
+
