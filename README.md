@@ -12,7 +12,6 @@ The songbook consists of two parts:
 
 If you want to access the original printed version, have a look at the [v1 (2022) release](https://github.com/kasnerz/songbook/releases/tag/version-1).
 
-
 ![cover](img/cover.png) ![index](img/index.png) ![index](img/page.png)
 
 The songbook is made with the [songs](http://songs.sourceforge.net) LaTeX package. 
