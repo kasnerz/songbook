@@ -36,7 +36,7 @@ def process_sbx_files(directory):
     return all_data
 
 # Replace 'your_directory_path' with the path to your directory containing *.sbx files
-directory_path = '.'
+directory_path = './toc'
 result_dataframe = process_sbx_files(directory_path)
 
 # Sort the dataframe by 'jazyk' and 'jméno' columns, consider unicode characters
