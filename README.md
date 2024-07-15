@@ -4,7 +4,7 @@
 
 My personal guitar songbook. Contains 333+ songs, primarily in Czech and English but also in other languages.
 
-:czech_republic: :us: :uk: :slovakia: :fr: :de: :netherlands: :it: :hungary: :ru: :serbia: :finland: :poland: :ukraine:
+:czech_republic: :us: :uk: :slovakia: :fr: :de: :netherlands: :it: :hungary: :ru: :serbia: :finland: :poland: :romania: :ukraine:
 
 The songbook consists of two parts: 
 - 👉️ the **[first part](https://github.com/kasnerz/songbook/raw/master/1.pdf)** is the original songbook compiled between 2020-22 (printed & slightly updated in the PDF version),
